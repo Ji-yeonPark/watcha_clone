@@ -19,7 +19,7 @@ class HeaderContainer extends Component {
       <Header>
         <HeaderList>
           <li>
-            <LoginButton />
+            <LoginButton title={'로그인'} />
           </li>
         </HeaderList>
 

@@ -4,24 +4,8 @@ import styled from 'styled-components';
 import { btnStyle } from 'lib/styleUtil';
 import { HomeBackground, HomeBackgroundText } from 'lib/Background';
 import { ArrowButton } from 'components/Home';
+import BackgroundImage from 'components/Base/BackgroundImage';
 
-const Wallpaper = styled.div`
-    background: url(${props => props.src}) no-repeat center / cover;
-    height: 100vh;
-    display: flex;
-    position: relative;
-
-    // 정가운데 위치
-    justify-content: center;
-    flex-direction: column;
-`;
-const WallOpacity = styled.div`
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(0,0,0);
-    opacity: .63;
-    position: absolute;
-`;
 const WallpaperInner = styled.div`
     position: relative;
     z-index: 100;
@@ -47,8 +31,7 @@ export default function WallPaper() {
   return (
     <>
       {HomeBackground.map((img, index) => (
-        <Wallpaper key={index} src={img}>
-          <WallOpacity></WallOpacity>
+        <BackgroundImage key={index} src={img} opacity={0.64} >
           <WallpaperInner>
             <WallpaperText>
               {HomeBackgroundText[index]}
@@ -58,7 +41,7 @@ export default function WallPaper() {
             </WallpaperButton>
           </WallpaperInner>
           <ArrowButton id={index} isLast={HomeBackground.length - 1 === index} />
-        </Wallpaper>
+        </BackgroundImage>
       ))}
     </>
   )

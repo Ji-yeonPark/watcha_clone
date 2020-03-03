@@ -9,9 +9,22 @@ const Button = styled(Link)`
 
 
 export default function LoginButton() {
+
+  const changeButton = () => {
+    // 로그인/회원가입 버튼 타이틀 변경
+    let title = "로그인";
+    let link = '/auth/sign_in';
+
+    if (window.location.pathname === '/auth/sign_in') {
+      title = "회원가입";
+      link = "/auth/sign_up";
+    }
+    return <Button to={link}> {title} </Button>
+  }
+
   return (
-    <Button to="/login">
-      로그인
-    </Button>
+    <>
+      {changeButton()}
+    </>
   )
 }

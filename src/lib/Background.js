@@ -13,3 +13,5 @@ export const HomeBackgroundText = [
   "이동 중에도 감상을 멈추지 마세요",
   "스마트폰, 태블릿, TV, PC, 크롬캐스트, Android TV에서"
 ]
+
+export const AuthBackground = 'https://images.watcha.net/updatable_images/2130/original/1cfd5170d7adbe8a8fdd06e33181429a18099965.jpg';
