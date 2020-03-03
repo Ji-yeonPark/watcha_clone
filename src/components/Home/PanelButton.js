@@ -15,8 +15,8 @@ export default class PanelButton extends Component {
 
 
   handleClick = (id) => {
-    window.scrollTo(0, window.innerHeight * id)
-    console.log(window.innerHeight * id)
+    // 선택한 panel로 이동
+    window.scrollTo({ top: window.innerHeight * id, behavior: 'smooth' });
   }
 
   render() {

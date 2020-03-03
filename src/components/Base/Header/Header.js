@@ -25,7 +25,7 @@ const Logo = styled.a`
 export default function Header({ children }) {
   return (
     <Navigation>
-      <Logo />
+      <Logo href="/" />
       {children}
     </Navigation>
   )

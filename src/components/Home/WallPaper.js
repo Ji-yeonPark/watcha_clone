@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { btnStyle } from 'lib/styleUtil';
 import { HomeBackground, HomeBackgroundText } from 'lib/Background';
+import { ArrowButton } from 'components/Home';
 
 const Wallpaper = styled.div`
     background: url(${props => props.src}) no-repeat center / cover;
@@ -56,6 +57,7 @@ export default function WallPaper() {
               2주 무료 이용 시작
             </WallpaperButton>
           </WallpaperInner>
+          <ArrowButton id={index} isLast={HomeBackground.length - 1 === index} />
         </Wallpaper>
       ))}
     </>
